@@ -410,13 +410,9 @@ td {
     width: 100%;
   }
   
-  .card__left {
-    background-color: #ebebeb;
-    height: 250%;
-    width: 105%;
+ .card {
+    width: 108%;
     margin-left: -4%;
-    border-radius: 10px;
-    position: relative;
   }
 
    .host_commision {
