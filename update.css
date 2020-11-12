@@ -409,7 +409,19 @@ td {
   .input_container {
     width: 100%;
   }
+  
+  .card__left {
+    background-color: #ebebeb;
+    height: 250%;
+    width: 105%;
+    margin-left: -4%;
+    border-radius: 10px;
+    position: relative;
+  }
 
+   .host_commision {
+    top: 50% !important;
+  }
   .input_container > input {
     width: 50%;
   }
