@@ -334,6 +334,8 @@ td {
   .card {
     margin-top: 160%;
     height: 30%;
+    width: 107%;
+    margin-left: -4%;
   }
 
   table {
