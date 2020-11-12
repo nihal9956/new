@@ -1,0 +1,113 @@
+/* TODO: Must import Montserrat from google fonts */
+
+body {
+  font-family: "Montserrat" !important;
+  background-color: #f8f9fa !important;
+}
+
+.collapse {
+  background-color: white;
+}
+
+ul li .zmdi,
+ul li .fas {
+  color: #c61d24;
+}
+
+@media screen and (min-width: 991px) {
+  .content {
+    margin-left: 250px;
+  }
+}
+
+.contest-card {
+  margin-bottom: 1rem;
+  position: relative;
+  background-image: url("images/contest-card.jpg");
+  background-size: cover;
+  height: 16rem;
+  border-radius: 5px;
+}
+
+.contest-card-inner {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.my-contests-content {
+  min-height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.wallet-items-group {
+  padding: 2rem;
+}
+
+.wallet-item {
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: block;
+  color: white;
+}
+
+.wallet-item-active {
+  background-color: white;
+  color: black;
+}
+
+.c_p_p {
+  width: 100%;
+  object-fit: cover;
+  height: 15rem;
+}
+
+.awesome-shadow {
+  box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.26);
+}
+
+.bg-select {
+  background-color: #f5003a;
+}
+
+.btnround {
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.progbar {
+  width: 40%;
+  height: 1rem;
+  border-radius: 15px;
+  background-color: #fcbd40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.progbar2 {
+  width: 100%;
+  height: 1rem;
+  border-radius: 15px;
+  background-color: rgb(212, 212, 212);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.progbar-text {
+  width: 100%;
+  margin-left: 1rem;
+  position: absolute;
+  z-index: 5;
+  top: -3px;
+  left: 0;
+}

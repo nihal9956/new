@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="new.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="update.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ############### START NAVBAR ############### -->
+    <div class="d-lg-none">
+      <div class="sidebar-header d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" class="logo"/>
+        </a>
+        <div class="text-white" id="openMenu">
+          <i class="fa fa-2x fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+    <nav id="sidebar" class="sactive" style="overflow: auto;">
+      <div class="sidebar-header">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" class="logo"
+        /></a>
+      </div>
+      <div id="dismiss" style="right: 3px;">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+
+
+      <ul class="list-unstyled components py-0">
+        <li ui-sref-active="active" ng-click="tog =!tog" class="">
+          <a ui-sref="user.contest" href="index.html">
+            <i class="zmdi zmdi-gamepad"></i> &nbsp; Play Contest</a
+          >
+        </li>
+        <li ui-sref-active="active" ng-click="tog =!tog" class="active">
+          <a ui-sref="user.mymatch" href="mycontests.html">
+            <i class="fas fa-gamepad"></i> &nbsp; My Contests</a
+          >
+        </li>
+        <li ui-sref-active="active" ng-click="tog =!tog" class="">
+          <a ui-sref="user.wallet" href="mywallet.html">
+            <i class="zmdi zmdi-balance-wallet"></i> &nbsp; My Wallet
+
+            <span style="float: right; padding-right: 5px; color: #888;"></span>
+              0</span
+            ></a
+          >
+        </li>
+        <li ui-sref-active="active">
+          <a
+            ng-click="sub =!sub"
+          >
+            <i class="zmdi zmdi-account-calendar"></i> &nbsp; My Profile</a
+          >
+          <ul class="collapse list-unstyled show" id="profile" style="">
+            <li ui-sref-active="active" ng-click="tog =!tog" class="">
+              <a ui-sref="user.stats" href="mystats.html" class="bg-light insider_item"
+                ><i class="zmdi zmdi-widgets"></i> &nbsp; My Stats</a
+              >
+            </li>
+            <li ui-sref-active="active" ng-click="tog =!tog" class="">
+              <a ui-sref="user.settings" href="settings.html" class="bg-light insider_item"
+                ><i class="zmdi zmdi-settings"></i> &nbsp; Settings</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li ui-sref-active="active" ng-click="tog =!tog" class="">
+          <a ui-sref="user.leaderboard" href="leaderboard.html">
+            <i class="zmdi zmdi-flag"></i> &nbsp; Leaderboard</a
+          >
+        </li>
+        <li>
+          <a href="#" target="_self">
+            <i class="zmdi zmdi-power"></i> &nbsp; Log Out</a
+          >
+        </li>
+        
+        <div class="col-12 text-center">
+          <a
+            href="https://www.facebook.com/TheMyTournamentapp/"
+            target="_blank"
+            class="social_i"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="#" target="_blank" class="social_i"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCbh_-p79iCUixj7FMCgLmDg"
+            target="_blank"
+            class="social_i"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" target="_blank" class="social_i"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" target="_blank" class="social_i"
+            ><i class="fab fa-telegram"></i
+          ></a>
+        </div>
+      </ul>
+    </nav>
+    <!-- ############### END NAVBAR ############### -->
+
+    <!-- ############### START CONTENT ############### -->
+    <div class="content">
+        <div class="rounded m-3 bg-light">
+            <div class="row">
+                <div class="col-lg-6 px-1 px-md-2 px-lg-3">
+                  <div class='card__left'>
+                    <div class="statistic__item au-card p-0 awesome-shadow" style="width:105%; position:absolute; left:-10px; top:-12px ">
+                        <div class="row m-0" ui-sref="contests.view({ contestId: contest._id })" style="cursor: pointer;" href="/contests/5f0333d420a4eb448a1a112a">
+                        <img src="banner.jpg" alt='banner'>
+                          <div class="col-sm-12">
+                    
+                    
+                            <div class='card_left'>
+
+                              <h2>Logo</h2>
+                              <h2 class="match">PUBG TDM MATCH # 622</h2>
+                              <a href="#"class='edit'>Edit</a>
+                            </div>
+
+                            <p class="time" style="font-size:19px">Time: 02/06/2020 at 04:00PM</p>
+
+
+
+
+                    <div class="text-center">
+                     
+                        <table>
+                          <thead>
+                            <th>WIN PRIZE
+                              <span>
+                                <img src="arrow.png">
+                              </span>
+                            </th>
+                           
+                            <th>PER KILL</th>
+                            <th>ENTRY FEE</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                             
+                            </tr>
+                          </tbody>
+                        </table>
+                        <hr class="divider">
+                        <table>
+                          <thead>
+                            <th>First </th>
+                           
+                            <th>Second </th>
+                            <th>Third </th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                              <td><span>
+                                <img src="money.png" alt="">
+                              </span> 20</td>
+                             
+                            </tr>
+                          </tbody>
+                        </table>
+                    
+  
+                     
+                    </div>
+
+                    
+                  </div>
+                        </div>
+                
+                      </div>
+                    <div class='host_commision'>                      
+                      <h1>Host Commision</h1>
+                      <div class='host_commision_container'>
+                        <span>
+                          <img src='money.png' alt='money'>
+                        </span> 100
+                      </div>
+                      <h1>100% Fill Bonus</h1>
+                      <div class='fillBonus__container'>
+                        <span>
+                          <img src='money.png' alt='money'>
+                        </span> 120
+                      </div>
+
+                      <div class='total_earning'>
+                     <h1>Total Earning</h1>
+                     <span>
+                      <img src='money.png' alt='money'>
+                    </span> 120
+                      </div>
+                    </div>
+
+
+                    </div>
+                     
+                  <div class="pb-3 text-right mb-4">
+                    <i class="fa fa-share-alt" style="font-size: 28px;
+                  margin: 0 9px;
+                  color: #adacac;"></i>
+          
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://MyTournamentapp.com/contests/5f10384b898c0b70a34c11fb" target="_blank" style="font-size: 30px;
+                  margin: 0px 5px;color: #4267b2;"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=Check this out&amp;url=https://MyTournamentapp.com/contests/5f10384b898c0b70a34c11fb" target="_blank" style="font-size: 30px;
+                  margin: 0px 5px;color:#1da1f2"><i class="fab fa-twitter"></i></a>
+                  </div>
+          
+                  <!---->
+                </div>
+                <div class="col-lg-6 px-1 px-md-2 px-lg-3">
+                  <div class="statistic__item au-card py-3 no-border awesome-shadow card" style="background-color:#EBEBEB">
+                  <div class='card_right'>
+          
+                   <p style="font-size:20px;color:black; font-weight:600;">Contest Name</p>
+                   <input type="text" placeholder="Super contest">
+                   <p style="font-size:18px;color:black; font-weight:600; margin-top:2%;">Select Map</p>
+                   <div class='map'>
+                   <div class='map_name _Active'>TDM</div>
+                   <div class='map_name'>Classic</div>
+                   <div class='map_name'>Evoground</div>
+                   </div>
+                   <p style="font-size:20px;color:black; font-weight:600; margin-top:2%">Set Entry fee</p>
+                   <div class='map'>
+                   <div class='amount Active'>10</div>
+                   <div class='amount'>25</div>
+                   <div class='amount'>50</div>
+                   <div class='amount'>100</div>
+                   <div class='amount'>200</div>
+                   </div>
+                   <p style="font-size:20px;color:black; font-weight:600; margin-top:2%">Team Allow</p>
+                   <label class="container">
+                     <div class='checkbox'>
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    <p>Allow multiplayer (Max 6)</p>
+                  </div>
+                  </label>
+                   
+                  <p style="font-size:18px;color:black; font-weight:600;">Date</p>
+
+                  <div class='input_container'>
+
+                    <input type="text" placeholder="Day" >
+
+                    <input type="text" placeholder="Month">
+
+                    <input type="text" placeholder="Year" style='border:none'>
+
+                  </div>
+
+                  <p style="font-size:18px;color:black; font-weight:600;">Time</p>
+
+                  <div class='input_container'>
+
+                    <input type="text" placeholder="00" >
+
+                    <input type="text" placeholder="00">
+
+                    <input type="text" placeholder="AM" style='border:none'>
+
+                  </div>
+
+                  <button class='contest_btn'>Create Contest</button>
+                   </div>
+                   
+                  </div>
+          
+                  <!----><div class="au-card py-3 no-border mb-3 bg-white awesome-shadow" ng-if="vm.contest.announcement">
+                    <p class="title-3 text-dark">
+                      Announcements
+                    </p>
+                    <hr>
+          
+                    <ul class="pl-3 font-weight-bold">
+                      <!----><li class="my-2" ng-repeat="i in vm.announcements">DO NOT ENTER EMAIL ID, MOBILE NO, OR PUBG ID IN GAME USERNAME. COPY YOUR PUBG USERNAME AND PASTE IT IN GAME USERNAME - NO REWARDS, NO REFUND FOR WRONG ENTRY. WE HAVE GIVEN ENOUGH WARNING </li><!----><li class="my-2" ng-repeat="i in vm.announcements">GO TO QUICK LINK AND CLICK HOW TO JOIN  ROOM ? </li><!----><li class="my-2" ng-repeat="i in vm.announcements">We request each and every one to give their GAME USERNAMES not there ID numbers, if your GAME USERNAME not matches with match joining username you'll be kicked out of the room and no refund will be given. </li><!----><li class="my-2" ng-repeat="i in vm.announcements">Update PUBG Mobile (in-game) before participating in the upcoming matches. </li><!----><li class="my-2" ng-repeat="i in vm.announcements">Make sure to update all the Maps before joining their matches. No refund in case you fail/forget to download. </li><!----><li class="my-2" ng-repeat="i in vm.announcements">Anybody submitting incorrect Character ID multiple times may get suspended without any prior notice. </li><!----><li class="my-2" ng-repeat="i in vm.announcements">Please note that the listed entry fee is per individual and not the squad/duo team. </li><!----><li class="my-2" ng-repeat="i in vm.announcements">You will be also rewarded for PER KILL AND ZERO KILL. Check the rewards details above.</li><!---->
+                    </ul>
+                  </div><!---->
+                </div>
+              </div>
+              <div class="row" ng-show="vm.contest.contest_status == 'result'">
+                <div class="col-lg-6 mt-5">
+                  <h4 class="text-center text-dark">CONTEST WINNER</h4>
+                  <hr>
+                  <div class="table-responsive table--no-card m-b-30 mt-4">
+                    <table class="table table-borderless table-striped table-earning">
+                      <thead>
+                        <tr>
+                          <th class="bg-danger text-center">S.No.</th>
+                          <th class="bg-danger text-center">Player</th>
+          
+                          <th class="bg-danger text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            Team Stats
+                          </th>
+                          <th class="bg-danger text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            Kills
+                          </th>
+                          <th class="bg-danger text-center">Winning</th>
+                          <!-- <th class="bg-danger text-center">Match Points</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!----><tr ng-repeat="user in vm.contest.joined | filter:{iswinner:true} | orderBy:'-winnings'">
+                          <td class="text-center">1</td>
+                          <td class="text-center">MrZ丨CODERED <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 3)</i>
+                          </td>
+          
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            3
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            537
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!---->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+          
+                <div class="col-lg-6 mt-5">
+                  <h4 class="text-center text-dark">ALL PLAYERS STATS</h4>
+                  <hr>
+                  <div class="table-responsive table--no-card m-b-30 mt-4">
+                    <table class="table table-borderless table-striped table-earning">
+                      <thead>
+                        <tr>
+                          <th class="bg-info text-center">S.No.</th>
+                          <th class="bg-info text-center">Player</th>
+                          <!-- <th class="bg-info text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            Kills
+                          </th> -->
+                          <th class="bg-info text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            Team Stats
+                          </th>
+                          <th class="bg-info text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            Kills
+                          </th>
+                          <th class="bg-info text-center">Winning</th>
+                          <!-- <th class="bg-info text-center">Match Points</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">1</td>
+                          <td class="text-center">MrZ丨CODERED <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 3)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            3
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            537
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">2</td>
+                          <td class="text-center">ＮｉＹａＺ <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 6)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            6
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            273
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">3</td>
+                          <td class="text-center">SanpYT <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            101
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">4</td>
+                          <td class="text-center">SoulKingKL46 <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 4)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            4
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            48
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">5</td>
+                          <td class="text-center">RaNgEr彡AMAL <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 3)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            3
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            36
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">6</td>
+                          <td class="text-center">ʝt 么 WสLtєr <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 3)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            3
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            36
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">7</td>
+                          <td class="text-center">TM乛47丨BLIND <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 3)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            3
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            36
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">8</td>
+                          <td class="text-center">SG么STEPHEN <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 2)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            2
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            24
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">9</td>
+                          <td class="text-center">LucasXTC <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 2)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            2
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            24
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">10</td>
+                          <td class="text-center">『ARB』jocker <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 2)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            2
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            24
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">11</td>
+                          <td class="text-center">CODE不BUNNY <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">12</td>
+                          <td class="text-center">『CRN』RDFoXx <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">13</td>
+                          <td class="text-center">ミALIEN乂KIDミ <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">14</td>
+                          <td class="text-center">JohnツWICk <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">15</td>
+                          <td class="text-center">RɑWシJishnu <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">16</td>
+                          <td class="text-center">¤Mr¤RAJESH¤ <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">17</td>
+                          <td class="text-center">pubggggggirl <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 1)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            1
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            12
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">18</td>
+                          <td class="text-center">TOR々LOOTER <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">19</td>
+                          <td class="text-center">V1983hhh <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">20</td>
+                          <td class="text-center">TKS公killMAFIA <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">21</td>
+                          <td class="text-center">ÃRmagedDon <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">22</td>
+                          <td class="text-center">VX么KURUKKAN <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">23</td>
+                          <td class="text-center">Wayde Dc <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">24</td>
+                          <td class="text-center">NihaalKc <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">25</td>
+                          <td class="text-center">KARTHIKARAJEN <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">26</td>
+                          <td class="text-center">DINNERsearcher <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">27</td>
+                          <td class="text-center">BrAnNaN <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">28</td>
+                          <td class="text-center">5209213116 <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">29</td>
+                          <td class="text-center">Ichujamshi <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">30</td>
+                          <td class="text-center">TERROR父LEGION <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">31</td>
+                          <td class="text-center">BigiL05 <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">32</td>
+                          <td class="text-center">13ARD <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">33</td>
+                          <td class="text-center">Anoopdevasia <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">34</td>
+                          <td class="text-center">Abhi98 <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">35</td>
+                          <td class="text-center">AmiGoking <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">36</td>
+                          <td class="text-center">Vichumon007 <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">37</td>
+                          <td class="text-center">007cidmoosa <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">38</td>
+                          <td class="text-center">Avanthika <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">39</td>
+                          <td class="text-center">FSTERROR <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">40</td>
+                          <td class="text-center">MrツoSm <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">41</td>
+                          <td class="text-center">ĐØĐ彡Abhii <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">42</td>
+                          <td class="text-center">NJS々ATHENA <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">43</td>
+                          <td class="text-center">Rudhra <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">44</td>
+                          <td class="text-center">OL丨DARKDEVIL <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">45</td>
+                          <td class="text-center">BATTLE父SIGNAL <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">46</td>
+                          <td class="text-center">Abhijith <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">47</td>
+                          <td class="text-center">Andanadakodan <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">48</td>
+                          <td class="text-center">TRD彡LoNeWoLf <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">49</td>
+                          <td class="text-center">GTHムCosmic <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">50</td>
+                          <td class="text-center">V彡NöMッAhOrY <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">51</td>
+                          <td class="text-center">Joaliyas <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">52</td>
+                          <td class="text-center">akhilchandran0093@gmail.com <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">53</td>
+                          <td class="text-center">DCツ尺icнss <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">54</td>
+                          <td class="text-center">M2丨cRL丨RiBBL <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!----><tr ng-repeat="user in vm.contest.joined |orderBy:'-winnings'">
+                          <td class="text-center">55</td>
+                          <td class="text-center">AsGīIīNinja <i ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'" class="">(Kills
+                              : 0)</i>
+                          </td>
+                          <!-- <td class="text-center"
+                            ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            {{user.kill}}
+                          </td> -->
+                          <td class="text-center ng-hide" ng-show="(vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod') &amp;&amp; vm.contest.game_type != 'solo'">
+                            <!---->
+                          </td>
+                          <td class="text-center" ng-show="vm.contest.game_name == 'pubg' || vm.contest.game_name == 'freefire' || vm.contest.game_name == 'pubglite' || vm.contest.game_name == 'cod'">
+                            0
+                          </td>
+                          <td class="text-center">
+                            <img src="images/rcoin.png">
+                            0
+                          </td>
+                          <!-- <td class="text-center">{{user.match_points}}</td> -->
+                        </tr><!---->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- ############### END CONTENT ############### -->
+    <script
+      src="https://kit.fontawesome.com/dea69459cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="update.js"></script>
+  </body>
+</html>
